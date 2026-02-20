@@ -2,7 +2,7 @@ import { useEditor, EditorContent, BubbleMenu, FloatingMenu } from "@tiptap/reac
 import CodeBlockLowlight from "@tiptap/extension-code-block-lowlight";
 import StarterKit from "@tiptap/starter-kit";
 import { initialContent } from "./initialContent";
-import { lowlight } from 'lowlight';
+import { createLowlight } from 'lowlight';
 import js from 'highlight.js/lib/languages/javascript';
 
 import { RxFontBold, RxFontItalic, RxStrikethrough, RxCode, RxChevronDown, RxChatBubble } from "react-icons/rx";
@@ -10,6 +10,8 @@ import { RxFontBold, RxFontItalic, RxStrikethrough, RxCode, RxChevronDown, RxCha
 import 'highlight.js/styles/tokyo-night-dark.css';
 import { BubbleButton } from "./BubbleButton";
 import { FloatButton } from "./FloatButton";
+
+const lowlight = createLowlight();
 
 lowlight.registerLanguage('javascript', js);
 
